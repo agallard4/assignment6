@@ -18,7 +18,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push container
-        run: docker run
-          docker build -t my-container.
+        run: |
+          docker run -t my-container.
           docker tag my-container alexg23/assignment6:prod
           docker push alexg23/assignment6:prod
+ 
