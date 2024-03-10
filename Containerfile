@@ -1,6 +1,4 @@
-# syntax=docker/dockerfile:1
-
-FROM ubuntu:22.04
-COPY . /app
-RUN make /app
-CMD python /app/app.py
+FROM ubuntu:latest
+RUN apt-get -y update 
+RUN apt-get -y upgrade
+RUN apt-get install -y build-essential
